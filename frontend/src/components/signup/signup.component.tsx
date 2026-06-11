@@ -19,10 +19,10 @@ interface IRegisterInfo {
   name: string;
   email: string;
   password: string;
+  confirmPassword: string;
 }
 
 interface Inputs extends IRegisterInfo {
-  confirmPassword: string;
   otp: string;
 }
 
@@ -136,6 +136,7 @@ const SignUpComponent = () => {
         name: data.name,
         email: data.email,
         password: data.password,
+        confirmPassword: data.confirmPassword,
       };
       const otpPayload = {
         name: data.name,
